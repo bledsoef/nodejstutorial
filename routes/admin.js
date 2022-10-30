@@ -7,7 +7,7 @@ const products = []
 
 // /admin/add-products => GET
 router.get('/add-product', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'views', 'add-product.html'))
+    res.render('add-product', {docTitle: 'Page Not Found', path:'/admin/add-product'})
 })
 
 // /admin/add-products => POST

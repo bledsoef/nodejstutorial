@@ -16,7 +16,7 @@ app.use('/admin', adminData.router)
 app.use(shopRoutes)
 
 app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', 'errors', '404.html'))
+    res.status(404).render('404', {docTitle: ''})
 })
 
 app.listen(3000)
